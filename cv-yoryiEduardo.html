@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yoryi Abreu — CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config (opcional)
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                500: "#5048E6",
+                600: "#4338ca",
+              },
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(2,6,23,0.06)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Ajustes para impresión */
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print\:block {
+          display: block !important;
+        }
+        .print\:text-sm {
+          font-size: 0.875rem !important;
+        }
+        .print\:leading-snug {
+          line-height: 1.375 !important;
+        }
+        html,
+        body {
+          background: white !important;
+        }
+        a[href]:after {
+          content: "" !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-600"
+  >
+    <!-- Barra de acciones -->
+    <div
+      class="no-print sticky top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60"
+    >
+      <div class="mx-auto max-w-5xl px-4 py-3 flex items-center gap-3">
+        <button
+          onclick="window.print()"
+          class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium hover:bg-slate-50 active:scale-[.99]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-4"
+          >
+            <path d="M6 7V3h12v4H6Zm0 14v-6h12v6H6ZM2 15V9h20v6h-2v-4H4v4H2Z" />
+          </svg>
+          Imprimir / PDF
+        </button>
+        <div class="ms-auto flex items-center gap-2 text-xs text-slate-500">
+          <span class="hidden sm:block"
+            >Tip: edita este HTML y reemplaza los datos de ejemplo.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <main class="mx-auto max-w-5xl px-4 py-8 print:py-0">
+      <div class="grid gap-6 lg:grid-cols-3">
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1 space-y-6">
+          <!-- Perfil -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <div class="flex items-center gap-4">
+              <div
+                class="size-16 shrink-0 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-100 to-white ring-1 ring-slate-200"
+              >
+                <!-- Reemplaza por <img> si tienes foto -->
+                <svg
+                  class="size-full p-3 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-5.33 0-8 2.67-8 5v1h16v-1c0-2.33-2.67-5-8-5Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold leading-tight tracking-tight">
+                  Yoryi Eduardo Abreu Pacheco
+                </h1>
+                <p class="text-sm text-slate-500">Full‑Stack Developer</p>
+              </div>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm">
+              <li class="flex items-center gap-2">
+                <svg
+                  class="size-4 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"
+                  />
+                </svg>
+                CABA, Argentina
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="size-4 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20 4H4v16h16V4ZM6 8h12v10H6V8Zm2-2h8v1H8V6Z" />
+                </svg>
+                <a class="hover:underline" href="mailto:yoryi@email.com"
+                  >yoryiabreu@gmail.com</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="size-4 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.47a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.01l-2.2 2.1Z"
+                  />
+                </svg>
+                <a class="hover:underline" href="tel:+5491100000000"
+                  >+54 9 11 24982489</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="size-4 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12a10 10 0 0 0 6.84 9.5c.5.09.68-.22.68-.49v-1.74c-2.78.6-3.36-1.17-3.36-1.17-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.6.07-.6 1 .07 1.53 1.04 1.53 1.04.89 1.52 2.34 1.08 2.9.83.09-.65.35-1.09.64-1.35-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.7-.1-.26-.45-1.3.1-2.7 0 0 .85-.27 2.8 1.02A9.7 9.7 0 0 1 12 6.8a9.7 9.7 0 0 1 2.55.34c1.95-1.29 2.8-1.02 2.8-1.02.55 1.4.2 2.44.1 2.7.64.71 1.03 1.61 1.03 2.7 0 3.84-2.34 4.68-4.57 4.93.36.31.69.92.69 1.86v2.76c0 .27.18.59.69.49A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10Z"
+                  />
+                </svg>
+                <a
+                  class="hover:underline"
+                  href="https://github.com/usuario"
+                  target="_blank"
+                  rel="noopener"
+                  >https://github.com/yoredut</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="size-4 text-brand-600"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M4 4h16v16H4V4Zm3 3v10h2V7H7Zm4 0v10h2V7h-2Zm4 0v10h2V7h-2Z"
+                  />
+                </svg>
+                <a
+                  class="hover:underline"
+                  href="https://yoryi.dev"
+                  target="_blank"
+                  rel="noopener"
+                  >https://www.linkedin.com/in/yoredut</a
+                >
+              </li>
+            </ul>
+
+            <div class="mt-6">
+              <h2
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+              >
+                Stack principal
+              </h2>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >TypeScript</span
+                >
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >React / Next.js</span
+                >
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >Node.js</span
+                >
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >Vue Js</span
+                >
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >Tailwind CSS</span
+                >
+                <span class="rounded-full border bg-white px-3 py-1 text-xs"
+                  >Strapi</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Competencias -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <h2 class="text-sm font-semibold tracking-wide text-slate-700">
+              Competencias Clave
+            </h2>
+            <ul class="mt-3 space-y-2 text-sm leading-relaxed text-slate-700">
+              <li>Arquitectura SaaS · Microservicios · API REST</li>
+              <li>DevOps (Nginx, PM2, Docker, DO)</li>
+              <li>IA aplicada</li>
+              <li>n8n (automatización de flujos entre APIs, backend y bots)</li>
+              <li>Testing y calidad (Jest)</li>
+              <li>Gestión ágil (Scrum/ClickUp)</li>
+            </ul>
+          </section>
+
+          <!-- Idiomas -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <h2 class="text-sm font-semibold tracking-wide text-slate-700">
+              Idiomas
+            </h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>Español — Nativo</li>
+              <li>Inglés — Basico</li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- Contenido principal -->
+        <section class="lg:col-span-2 space-y-6">
+          <!-- Hero / Resumen -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <h2 class="text-lg font-semibold tracking-tight">Perfil</h2>
+            <p class="mt-2 text-sm leading-relaxed text-slate-700">
+              Soy un desarrollador web entusiasta, creador y colaborador de
+              soluciones web. Entre mis puntos fuertes personales, es ser
+              atento, metódico, responsable, respetuoso y comprometido con mi
+              trabajo. Me considero una persona que siempre busca herramientas y
+              aprende nuevas tecnologías. Tengo la capacidad de liderar y
+              trabajar bajo presión y en equipo. Mi experiencia como
+              desarrollador web se ha centrado en tecnologías web como:
+              *Front-End: Javascript / ES6 / ES7, CSS (Flex Box, Grid) / SASS /
+              LESS, jQuery, Bootstrap,Tailwind, React js, Vue js. *Back-End:
+              Php, Laravel, Node. *CMS: Wordpress, Drupal *Manejo de
+              versionador: Git.
+            </p>
+          </section>
+
+          <!-- Experiencia -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-semibold tracking-tight">Experiencia</h2>
+              <span class="text-xs text-slate-500">Selección relevante</span>
+            </div>
+            <ol class="mt-4 space-y-6">
+              <li class="relative ps-6">
+                <div
+                  class="absolute left-0 top-1 size-2 rounded-full bg-brand-500"
+                ></div>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <h3 class="font-semibold">
+                    Desarrollador Full Stack (DATAKI.CO)
+                  </h3>
+                  <span class="text-xs text-slate-500">2023 - 2025</span>
+                </div>
+                <ul
+                  class="mt-2 list-disc ps-5 text-sm leading-relaxed text-slate-700"
+                >
+                  <li>
+                    Como Desarrollador Web Full Stack Freelance a través de
+                    Dataki, participé en proyectos para marcas de gran alcance
+                    como Oreo, Glade y Cinépolis, donde diseñé, desarrollé y
+                    mantuve sitios y aplicaciones web utilizando Angular, React,
+                    JavaScript y HTML5. Mi labor incluyó la creación de
+                    interfaces modernas y responsivas, la optimización de la
+                    experiencia del usuario y el aseguramiento de la calidad en
+                    cada entrega. Asimismo, me encargué del mantenimiento
+                    correctivo y evolutivo, garantizando la estabilidad,
+                    rendimiento y actualización continua de las plataformas
+                    digitales, en total alineación con los estándares de marca y
+                    las necesidades del cliente.
+                  </li>
+                </ul>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded border px-2 py-0.5">Angular</span>
+                  <span class="rounded border px-2 py-0.5">React Js</span>
+                  <span class="rounded border px-2 py-0.5">Tailwind</span>
+                  <span class="rounded border px-2 py-0.5">Flexbox</span>
+                  <span class="rounded border px-2 py-0.5">Grid</span>
+                  <span class="rounded border px-2 py-0.5">APis REST</span>
+                </div>
+              </li>
+              <li class="relative ps-6">
+                <div
+                  class="absolute left-0 top-1 size-2 rounded-full bg-brand-500"
+                ></div>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <h3 class="font-semibold">
+                    Desarrollador Front End (REALTY CANDY)
+                  </h3>
+                  <span class="text-xs text-slate-500">2021 - 2023</span>
+                </div>
+                <ul
+                  class="mt-2 list-disc ps-5 text-sm leading-relaxed text-slate-700"
+                >
+                  <li>
+                    Como Desarrollador Web Freelance, diseñé y desarrollé sitios
+                    inmobiliarios para el mercado estadounidense utilizando
+                    WordPress y PHP, integrando IDX Broker para la gestión y
+                    visualización dinámica de propiedades. Implementé
+                    funcionalidades personalizadas, optimicé el rendimiento y la
+                    experiencia móvil, y realicé mantenimiento correctivo y
+                    evolutivo. Además, aseguré el cumplimiento de estándares de
+                    accesibilidad (ADA) para garantizar una navegación inclusiva
+                    y profesional.
+                  </li>
+                </ul>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded border px-2 py-0.5">Wordpress</span>
+                  <span class="rounded border px-2 py-0.5">PHP</span>
+                  <span class="rounded border px-2 py-0.5">GitHub</span>
+                </div>
+              </li>
+              <!-- Item -->
+              <li class="relative ps-6">
+                <div
+                  class="absolute left-0 top-1 size-2 rounded-full bg-brand-500"
+                ></div>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <h3 class="font-semibold">
+                    Desarrollador Front-End (baufest)
+                  </h3>
+                  <span class="text-xs text-slate-500"
+                    >oct 2019 - feb 2021</span
+                  >
+                </div>
+                <ul
+                  class="mt-2 list-disc ps-5 text-sm leading-relaxed text-slate-700"
+                >
+                  <li>
+                    -Desarrollo e implementación de interfaces SPA modernas
+                    utilizando ReactJS y herramientas del ecosistema frontend
+                    como React-Bootstrap, Reach Router, Less y Redux para la
+                    gestión global de estados. Integración de datos mediante
+                    Axios y uso de librerías auxiliares (clsx, currency.js,
+                    moment.js, react-datetime) para optimizar tareas
+                    específicas. Diseño y mantenimiento de microservicios
+                    Node.js con Express, implementando un BFF (Back-End for
+                    Front-End) encargado de filtrar y transformar información
+                    proveniente de múltiples APIs. Manejo de body-parser,
+                    config, cookie-parser y Multer para gestión de archivos y
+                    solicitudes complejas. Aplicación de buenas prácticas de
+                    seguridad y cumplimiento de estándares de análisis con
+                    SonarQube y Veracode. Desarrollo de tests unitarios con
+                    Mocha/Chai y pruebas end-to-end con Cypress. Uso de Postman
+                    para validación manual de servicios, GitLab/GitHub para
+                    control de versiones, y OpenShift para despliegues en
+                    entornos productivos.
+                  </li>
+                </ul>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded border px-2 py-0.5">React Js</span>
+                  <span class="rounded border px-2 py-0.5">Apis</span>
+                  <span class="rounded border px-2 py-0.5">GitHub</span>
+                  <span class="rounded border px-2 py-0.5">Redux</span>
+                </div>
+              </li>
+              <!-- Item -->
+              <li class="relative ps-6">
+                <div
+                  class="absolute left-0 top-1 size-2 rounded-full bg-brand-500"
+                ></div>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <h3 class="font-semibold">
+                    Desarrollador Front-End (Nonadesign - Freelancer)
+                  </h3>
+                  <span class="text-xs text-slate-500"
+                    >sept 2017 - oct 2018 · Remoto</span
+                  >
+                </div>
+                <ul
+                  class="mt-2 list-disc ps-5 text-sm leading-relaxed text-slate-700"
+                >
+                  <li>
+                    Desarrollo y personalización de themes WordPress (gratuitos,
+                    premium y custom desde cero), con experiencia en
+                    instalación, migración y adaptación de sitios bajo el
+                    Genesis Framework. Implementación de componentes y widgets
+                    con PHP (OOP) y maquetación responsive utilizando Sass,
+                    Flexbox, Grid Layout y Bootstrap, garantizando un diseño
+                    moderno y adaptable a dispositivos móviles. Integración de
+                    ReactJS y JavaScript (vanilla/jQuery) para componentes
+                    interactivos, y creación/consumo de API REST tanto en
+                    Node.js como en PHP. Gestión de bases de datos MySQL
+                    (consultas, triggers y funciones) y uso de Git para control
+                    de versiones y trabajo colaborativo.
+                  </li>
+                </ul>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded border px-2 py-0.5">PHP</span>
+                  <span class="rounded border px-2 py-0.5">Node</span>
+                  <span class="rounded border px-2 py-0.5">Flex-Box</span>
+                  <span class="rounded border px-2 py-0.5">Wordpress</span>
+                </div>
+              </li>
+              <!-- Item -->
+              <li class="relative ps-6">
+                <div
+                  class="absolute left-0 top-1 size-2 rounded-full bg-brand-500"
+                ></div>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <h3 class="font-semibold">
+                    Desarrollador Front-End (BH Software)
+                  </h3>
+                  <span class="text-xs text-slate-500"
+                    >sept 2017 - oct-2018</span
+                  >
+                </div>
+                <ul
+                  class="mt-2 list-disc ps-5 text-sm leading-relaxed text-slate-700"
+                >
+                  <li>
+                    Desarrollo de sitios web personalizados con Laravel (PHP),
+                    Node.js + Express y ReactJS, gestionando rutas, estados y
+                    peticiones HTTP. Experiencia en WordPress (themes
+                    personalizados, migraciones y Genesis Framework),
+                    maquetación responsive con Sass, Flexbox, Grid y Bootstrap,
+                    y creación de widgets con PHP OOP. Manejo de API REST, tanto
+                    en Node.js como en Laravel, y gestión de bases de datos
+                    MySQL, incluyendo triggers y funciones.
+                  </li>
+                </ul>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span class="rounded border px-2 py-0.5">PHP</span>
+                  <span class="rounded border px-2 py-0.5">Node</span>
+                  <span class="rounded border px-2 py-0.5">Flex-Box</span>
+                  <span class="rounded border px-2 py-0.5">Wordpress</span>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Proyectos Destacados -->
+          <!--<section class="rounded-2xl bg-white shadow-soft p-6">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-semibold tracking-tight">Proyectos</h2>
+              <span class="text-xs text-slate-500">Código / Demos</span>
+            </div>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              
+              <article
+                class="rounded-xl border bg-white p-4 transition shadow-sm hover:shadow-soft"
+              >
+                <h3 class="font-semibold">AI SEO Tools</h3>
+                <p class="mt-1 text-sm text-slate-600">
+                  Suite de herramientas SEO (renombrador, meta generator,
+                  auditor) con IA.
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <a class="underline" href="#" target="_blank">Repositorio</a>
+                  <a class="underline" href="#" target="_blank">Demo</a>
+                </div>
+              </article>
+              <article
+                class="rounded-xl border bg-white p-4 transition shadow-sm hover:shadow-soft"
+              >
+                <h3 class="font-semibold">SmartOdds</h3>
+                <p class="mt-1 text-sm text-slate-600">
+                  Detección de value bets con modelo Poisson y comparador de
+                  cuotas.
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                  <a class="underline" href="#" target="_blank">Repositorio</a>
+                  <a class="underline" href="#" target="_blank">Demo</a>
+                </div>
+              </article>
+            </div>
+          </section>   -->
+
+          <!-- Educación y Certificaciones -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <h2 class="text-lg font-semibold tracking-tight">Educación</h2>
+            <ul class="mt-3 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <span><strong>Ingeniería en Informatica</strong>(2006-2011) — UNET</span>
+                  <span class="text-xs text-slate-500">Venezuela</span>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="flex flex-wrap items-baseline justify-between gap-2"
+                >
+                  <span><strong>Contador Publico</strong>(2010-2016)-UCAT</span>
+                  <span class="text-xs text-slate-500">Venezuela</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Habilidades -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <h2 class="text-lg font-semibold tracking-tight">Habilidades</h2>
+            <div class="mt-3 grid gap-3 sm:grid-cols-2">
+              <div>
+                <h3 class="text-sm font-semibold text-slate-700">Frontend</h3>
+                <p class="mt-1 text-sm text-slate-700">
+                  React, Next.js, Angular, Tailwind, SSR/ISR, Accesibilidad
+                </p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-700">Backend</h3>
+                <p class="mt-1 text-sm text-slate-700">
+                  Node/Express, Python/Flask, Strapi, PostgreSQL, MongoDB
+                </p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-700">DevOps</h3>
+                <p class="mt-1 text-sm text-slate-700">
+                  Docker, Nginx, PM2, CI/CD, Observabilidad básica
+                </p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-700">IA & Data</h3>
+                <p class="mt-1 text-sm text-slate-700">
+                  LLMs, n8n (flujos automatizados e integración de procesos)
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA final -->
+          <section class="rounded-2xl bg-white shadow-soft p-6">
+            <div
+              class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <p class="text-sm text-slate-700">
+                Disponible para roles Full‑Stack y PM técnico. Enfoque en
+                impacto, shipping continuo y calidad.
+              </p>
+             
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <!-- Footer pequeño -->
+      <footer
+        class="mt-8 mb-8 text-center text-xs text-slate-400 print:text-sm print:leading-snug"
+      >
+        © <span id="year"></span> Yoryi Abreu — CV • Este documento es
+        imprimible (A4) y responsive.
+      </footer>
+    </main>
+
+    <script>
+      // Año dinámico
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
